@@ -8,6 +8,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
+  syncPolicy:
+    automated: {}
   destination:
     namespace: helm-guestbook
     server: {{ .Values.spec.destination.server }}
